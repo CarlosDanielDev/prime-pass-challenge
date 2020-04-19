@@ -105,7 +105,6 @@ export default function Movies() {
 
       <FlatList
         data={movies}
-        style={{marginBottom: 100}}
         keyExtractor={(mov) => mov.id}
         numColumns={2}
         onRefresh={loadMovies}

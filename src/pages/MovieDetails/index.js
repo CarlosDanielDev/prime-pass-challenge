@@ -40,16 +40,16 @@ import {
 export default function MovieDetails() {
   const route = useRoute();
   const navigation = useNavigation();
-  const {id, imDbRating, title, crew} = route.params.data;
+  const {image, id, imDbRating, title, crew} = route.params.data;
   const [info, setInfo] = useState({});
   const [actors, setActors] = useState([]);
   const [load, setLoad] = useState(false);
 
-  async function getInfoMovie(id) {
+  async function getInfoMovie(idMovie) {
     try {
       setLoad(true);
 
-      const response = await imdb.get(`/API/Title/${apikey.apiKey}/${id}`);
+      const response = await imdb.get(`/API/Title/${apikey.apiKey}/${idMovie}`);
       const {actorList} = response.data;
       setInfo(response.data);
       setActors(actorList);
@@ -71,7 +71,7 @@ export default function MovieDetails() {
         <>
           <Image
             source={{
-              uri: info.image,
+              uri: image,
             }}
           />
           <StatusBar
