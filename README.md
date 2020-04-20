@@ -4,7 +4,7 @@
 - [PrimePass](https://api-content.ingresso.com/v0/swagger/ui/index#/)
 - [IMDb](https://imdb-api.com/swagger/index.html)
 
-> Caso faça mais de 100 Requisições, será necessário aguarda o próximo dia ou editar o arquivo `src/config/apikey.js` e informar uma chave de API válida.
+> Caso faça mais de 100 Requisições, será necessário aguardar o próximo dia, ou editar o arquivo `src/config/apikey.js` e informar uma chave de API válida.
 
 Aplicação construída com React Native para dispositivos mobile `Android`(O código não foi testado em dispositivos `iOS` por motivos limitação de recurso), as funcionalidades dessa aplicação são:
 
